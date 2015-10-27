@@ -25,6 +25,9 @@ let g:DisableAutoPHPFolding = 0
 let g:ip_skipfold = 1 " Dont open folds! 
 let g:EasyMotion_smartcase = 1
 let g:ctrlp_show_hidden = 1
+let g:PreserveNoEOL = 1
+let g:github_access_token=""
+let g:github_issues_no_omni = 1
 
 "Personal mapping by Hakim
 noremap <C-e> :NERDTreeToggle<CR>
@@ -79,6 +82,8 @@ Plugin 'KabbAmine/zeavim.vim'
 "Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
 Plugin 'vim-scripts/pdv-standalone'
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'vim-scripts/PreserveNoEOL'
+Plugin 'jaxbot/github-issues.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
