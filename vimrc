@@ -35,7 +35,8 @@ noremap <Leader>e :NERDTreeFind<CR>
 "noremap <C-]> :CtrlPFunky<CR>
 "noremap <C-\> :execute 'CtrlPFunky ' . expand ('<cword>')<CR>
 noremap <C-\> :CtrlPFunky<CR>
-noremap <C-u> :UndotreeToggle<CR>
+"noremap <C-u> :UndotreeToggle<CR>
+noremap <Leader>u :UndotreeToggle<CR>
 noremap <F2> :NeoCompleteToggle<CR>
 "noremap <F3> :CtrlPBuffer<CR>
 nmap s <Plug>(easymotion-s)
@@ -85,8 +86,6 @@ Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'vim-scripts/PreserveNoEOL'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -196,9 +195,11 @@ if has("autocmd")
   au BufNewFile,BufReadPost *.md set filetype=markdown
 
   " PHP documenter script bound to Control-D
-  autocmd FileType php inoremap <C-d> <ESC>:call PhpDocSingle()<CR>i
-  autocmd FileType php nnoremap <C-d> :call PhpDocSingle()<CR>
-  autocmd FileType php vnoremap <C-d> :call PhpDocRange()<CR> 
+  "autocmd FileType php inoremap <C-d> <ESC>:call PhpDocSingle()<CR>i
+  "autocmd FileType php nnoremap <C-d> :call PhpDocSingle()<CR>
+  "autocmd FileType php vnoremap <C-d> :call PhpDocRange()<CR> 
+  autocmd FileType php nnoremap <Leader><d> :call PhpDocSingle()<CR>
+  autocmd FileType php vnoremap <Leader><d> :call PhpDocRange()<CR> 
 
   " Insert use statements for vim-php-namespace
   autocmd FileType php inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
