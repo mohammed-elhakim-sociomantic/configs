@@ -31,6 +31,10 @@ let g:github_access_token=""
 let g:github_issues_no_omni = 1
 
 "Personal mapping by Hakim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+nmap // :noh<CR>
 noremap <C-e> :NERDTreeToggle<CR>
 noremap <Leader>e :NERDTreeFind<CR>
 "noremap <C-]> :CtrlPFunky<CR>
@@ -80,6 +84,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'd11wtq/ctrlp_bdelete.vim'
 "Plugin 'vim-scripts/YankRing.vim'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'haya14busa/incsearch.vim'
 Plugin 'KabbAmine/zeavim.vim'
 "Plugin 'vim-scripts/PDV--phpDocumentor-for-Vim'
 Plugin 'vim-scripts/pdv-standalone'
