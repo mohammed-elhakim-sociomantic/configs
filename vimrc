@@ -25,6 +25,7 @@ let g:DisableAutoPHPFolding = 0
 let g:ip_skipfold = 1 " Dont open folds! 
 let g:EasyMotion_smartcase = 1
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_match_window = 'results:100'
 let g:PreserveNoEOL = 1
 let g:github_access_token=""
 let g:github_issues_no_omni = 1
