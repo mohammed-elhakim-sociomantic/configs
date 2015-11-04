@@ -15,6 +15,7 @@
     set laststatus=2 "For airline"
     set winminheight=0
     set hidden
+    set rtp+=~/.fzf
 " }}}
 
 " Global vars {{{
@@ -177,8 +178,8 @@ if has("autocmd")
   au BufNewFile,BufReadPost *.md set filetype=markdown
 
   " PHP documenter script bound to Leader-D
-  autocmd FileType php nnoremap <Leader><d> :call PhpDocSingle()<CR>
-  autocmd FileType php vnoremap <Leader><d> :call PhpDocRange()<CR> 
+  autocmd FileType php nnoremap <Leader>d :call PhpDocSingle()<CR>
+  autocmd FileType php vnoremap <Leader>d :call PhpDocRange()<CR> 
 
   " Insert use statements for vim-php-namespace
   autocmd FileType php inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
