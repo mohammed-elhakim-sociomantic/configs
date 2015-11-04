@@ -92,6 +92,8 @@ Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'vim-scripts/PreserveNoEOL'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
