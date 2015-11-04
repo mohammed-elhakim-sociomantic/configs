@@ -1,6 +1,6 @@
 # Disabling googleads
-127.0.0.1	googleads.g.doubleclick.net
-127.0.0.1	pagead2.googlesyndication.com
+127.0.0.1 googleads.g.doubleclick.net
+127.0.0.1 pagead2.googlesyndication.com
 127.0.0.1 pubads.g.doubleclick.net
 127.0.0.1 r10---sn-vgqsened.googlevideo.com
 127.0.0.1 secure-ds.serving-sys.com
