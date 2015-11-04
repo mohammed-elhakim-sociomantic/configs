@@ -126,4 +126,3 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export PS1="${PS1::$((${#PS1}-3))}\$(__git_ps1 ' [\[\e[34;1m\]%s\[\e[0m\]]')\$ "
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-eval $(thefuck --alias)
