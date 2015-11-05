@@ -25,6 +25,7 @@
     let g:DisableAutoPHPFolding = 0
     let g:ip_skipfold = 1 " Dont open folds! 
     let g:EasyMotion_smartcase = 1
+    let g:EasyMotion_keys = "abcdefghijklmnopqrstuvwxyz"
     let g:ctrlp_show_hidden = 1
     let g:ctrlp_match_window = 'results:100'
     let g:PreserveNoEOL = 1
@@ -177,7 +178,7 @@ if has("autocmd")
   au FileType help :noremap <buffer> <c-]> <c-]>
   au BufNewFile,BufReadPost *.md set filetype=markdown
 
-  " PHP documenter script bound to Leader-D
+  " PHP documenter script bound to Leader-d
   autocmd FileType php nnoremap <Leader>d :call PhpDocSingle()<CR>
   autocmd FileType php vnoremap <Leader>d :call PhpDocRange()<CR> 
 
