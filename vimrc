@@ -46,6 +46,7 @@ noremap <Leader>u :UndotreeToggle<CR>
 noremap <F2> :NeoCompleteToggle<CR>
 "noremap <F3> :CtrlPBuffer<CR>
 nmap s <Plug>(easymotion-s)
+nmap S <Plug>(easymotion-bd-w)
 
 " Window Movements
 noremap <C-J> <C-W>j<C-W>_
