@@ -56,6 +56,8 @@ noremap <C-L> <C-W>l<C-W>_
 noremap <C-H> <C-W>h<C-W>_
 
 noremap x "_x
+"Suggested by sakkemo on IRC but I don't get it
+"nnoremap <expr> x (v:register=='"' <bar><bar> v:register=='_') ? '"_x' : 'x')
 
 " Vundle Stuff
 set nocompatible              " be iMproved, required
