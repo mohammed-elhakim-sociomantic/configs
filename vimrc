@@ -48,11 +48,14 @@ noremap <F2> :NeoCompleteToggle<CR>
 nmap s <Plug>(easymotion-s)
 nmap S <Plug>(easymotion-bd-w)
 
+
 " Window Movements
 noremap <C-J> <C-W>j<C-W>_
 noremap <C-K> <C-W>k<C-W>_
 noremap <C-L> <C-W>l<C-W>_
 noremap <C-H> <C-W>h<C-W>_
+
+noremap x "_x
 
 " Vundle Stuff
 set nocompatible              " be iMproved, required

@@ -62,6 +62,9 @@
     noremap <C-L> <C-W>l<C-W>_
     noremap <C-H> <C-W>h<C-W>_
 
+    "x will no longer place in registers
+    noremap x "_x
+
     "Neocomplete supertab!
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " }}}
