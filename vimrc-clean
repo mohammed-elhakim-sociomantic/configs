@@ -16,7 +16,7 @@
     set winminheight=0
     set hidden
     set rtp+=~/.fzf
-    set grepprg=grep\ -ir "Run grep -ir when grep is invoked
+    "set grepprg=grep\ -ir "Run grep -ir when grep is invoked
 " }}}
 
 " Global vars {{{
