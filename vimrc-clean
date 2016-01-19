@@ -16,6 +16,7 @@
     set winminheight=0
     set hidden
     set rtp+=~/.fzf
+    set grepprg=grep\ -ir "Run grep -ir when grep is invoked
 " }}}
 
 " Global vars {{{
@@ -62,7 +63,7 @@
     noremap <C-L> <C-W>l<C-W>_
     noremap <C-H> <C-W>h<C-W>_
 
-    "x will no longer place in registers
+    " X will no longer write to register
     noremap x "_x
 
     "Neocomplete supertab!
@@ -189,5 +190,7 @@ if has("autocmd")
   " Insert use statements for vim-php-namespace
   autocmd FileType php inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
   autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+  autocmd QuickFixCmdPost grep cwindow "Call Cwindow after grep has been invoked
 endif
 " }}}
