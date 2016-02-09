@@ -64,7 +64,7 @@
     noremap <C-H> <C-W>h<C-W>_
 
     " X will no longer write to register
-    noremap x "_x
+    "noremap x "_x
 
     "Neocomplete supertab!
     inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
