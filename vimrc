@@ -76,6 +76,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'bling/vim-bufferline'
 "Plugin 'Townk/vim-autoclose' Disabled because it conflicts with Neocomplete: https://github.com/Shougo/neocomplcache.vim/issues/350
 Plugin 'jiangmiao/auto-pairs'
