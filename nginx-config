@@ -1,0 +1,24 @@
+# ==========================================
+# Adminer location
+# ==========================================
+
+location ~ ^/adminer/?(.*)$
+{
+    alias /opt/adminer/$1;
+
+    index index.php;
+
+    location ~ ^/adminer(.+\.php)$•
+    {
+        alias /opt/adminer/index.php$1;
+        fastcgi_pass unix:/var/run/php5-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+        include /etc/nginx/fastcgi_params;
+        fastcgi_intercept_errors on;
+
+        break;
+    }
+
+    break;
+}
+
