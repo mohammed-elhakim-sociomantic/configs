@@ -119,7 +119,7 @@ call ctrlp_bdelete#init()
 " Colorschema {{{
     " Solarized Stuff
     if globpath(&rtp, 'bundle/vim-colors-solarized')                                                                                                                                                                                                                              
-        colorscheme solarized•
+        colorscheme solarized
     endif
     set cul
     let g:airline_theme='hybridline'
