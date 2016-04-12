@@ -51,6 +51,7 @@
     nmap // :noh<CR>
     noremap <C-e> :NERDTreeToggle<CR>
     noremap <Leader>e :NERDTreeFind<CR>
+    
     noremap <C-\> :CtrlPFunky<CR>
     noremap <Leader>u :UndotreeToggle<CR>
     noremap <F2> :NeoCompleteToggle<CR>
@@ -86,7 +87,7 @@
         Plugin 'bling/vim-airline'
         Plugin 'vim-airline/vim-airline-themes'
         Plugin 'jiangmiao/auto-pairs'
-        Plugin 'kien/ctrlp.vim'
+        Plugin 'ctrlpvim/ctrlp.vim'
         Plugin 'tacahiroy/ctrlp-funky'
         Plugin 'vim-scripts/Improved-paragraph-motion'
         Plugin 'vim-scripts/sessionman.vim'
