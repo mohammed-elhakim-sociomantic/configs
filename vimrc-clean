@@ -34,6 +34,7 @@
     let g:github_access_token=""
     let g:github_issues_no_omni = 1
     let g:incsearch#auto_nohlsearch = 1
+    let g:neocomplete#enable_at_startup = 1
 " }}}
 
 " Personal mapping by Hakim {{{
