@@ -1,4 +1,5 @@
 syntax enable
+set bs=indent,eol,start
 set et sts=4 ts=4 sw=4
 set ai si
 set wildmode=full wildmenu
