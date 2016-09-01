@@ -1,0 +1,21 @@
+[user]
+    email = mohammed.elhakim@<?>
+    name = Mohammed El-Hakim
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore
+[alias]
+    glog = log --all --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[push]
+    default = simple
+[pull]
+    default = current
+    rebase = true
+[rerere]
+   enabled = true
+[web]
+	browser = google-chrome
