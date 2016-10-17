@@ -1,0 +1,33 @@
+server
+{
+    # ==========================================
+    # Basic Settings
+    # ==========================================
+
+    server_name appfail;
+
+    listen 80;
+
+    root /srv/www/htdocs/appfail;
+
+    location ^~ /laravel
+    {
+		    index index.php;
+        alias /srv/www/htdocs/laravel/public;
+		    try_files $uri $uri/ @laravel;
+
+        fastcgi_index   index.php;
+		    location ~ \.php {
+			      fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+			      fastcgi_split_path_info ^(.+\.php)(.*)$;
+			     include /etc/nginx/fastcgi_params;
+		    }
+    }
+
+	location @laravel {
+		rewrite /thresher/(.*)$ /laravel/index.php?/$1 last;
+	}
+
+    access_log off;
+    error_log /srv/log/nginx/laravel/error.log;
+}
