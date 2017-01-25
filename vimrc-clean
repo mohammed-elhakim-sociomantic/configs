@@ -18,7 +18,6 @@
     set hidden
     set rtp+=~/.fzf
     "Stolen from http://codeinthehole.com/writing/using-the-silver-searcher-with-vim/
-    "set grepprg=grep\ -irn\ $*\ *\ /dev/null "Run grep -ir when "grep is invoked
     if executable("ag")
         set grepprg=ag\ --nogroup\ --nocolor\ --column
         let g:ctrlp_user_command = 'ag %s -l --nogroup --nocolor -g ""'
@@ -41,7 +40,7 @@
     let g:github_access_token=""
     let g:github_issues_no_omni = 1
     let g:incsearch#auto_nohlsearch = 1
-    "let g:neocomplete#enable_at_startup = 1
+    let g:neocomplete#enable_at_startup = 1
 " }}}
 
 " Personal mapping by Hakim {{{
@@ -118,6 +117,7 @@
         Plugin 'flazz/vim-colorschemes'
         Plugin 'xolox/vim-misc'
         Plugin 'xolox/vim-notes'
+        Plugin 'vim-php/vim-php-refactoring'
     " }}}
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -130,12 +130,11 @@ call ctrlp_bdelete#init()
 
 " Colorschema {{{
     " Solarized Stuff
-    if globpath(&rtp, 'bundle/vim-colors-solarized')                                                                                                                                                                                                                              
-        colorscheme solarized
-    endif
+    colorscheme solarized 
     set cul
     let g:airline_theme='hybrid'
     highlight Specialkey ctermbg=none
+    set background=dark
 " }}}
 
 " Initialize directories Stolen from spf13  {{{
@@ -193,7 +192,7 @@ if has("autocmd")
   "autocmd FileType php set completefunc=phpcomplete#CompletePHP
 
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif " Jump to the last position 
-  au BufWinLeave *.* mkview
+  "au BufWinLeave *.* mkview
   au BufWinEnter *.* silent loadview
   "au BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)')) " Googled 'foldlevelstart not working' to get this one'
   "au BufWinEnter * norm zR
