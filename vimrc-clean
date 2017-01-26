@@ -187,6 +187,10 @@ command! ZoomToggle call s:ZoomToggle()
 nnoremap <silent> <Esc>x :ZoomToggle<CR>
 " }}}
 
+" Json Formatting {{{
+command -range=% JsonFormat <line1>,<line2>!python -m json.tool
+" }}}
+
 " Autocommands {{{
 if has("autocmd")
   "autocmd FileType php set completefunc=phpcomplete#CompletePHP
