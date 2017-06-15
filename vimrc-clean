@@ -41,6 +41,16 @@
     let g:github_issues_no_omni = 1
     let g:incsearch#auto_nohlsearch = 1
     let g:neocomplete#enable_at_startup = 1
+    let g:php_refactor_command='~/bin/refactor.phar'
+
+    " Golang variables
+    let g:go_bin_path=expand("~/bin/go/bin")
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_build_constraints = 1
 " }}}
 
 " Personal mapping by Hakim {{{
@@ -101,6 +111,7 @@
         Plugin 'vim-scripts/sessionman.vim'
         Plugin 'rayburgemeestre/phpfolding.vim'
         Plugin 'tpope/vim-fugitive'
+        Plugin 'tpope/vim-rhubarb'
         Plugin 'mbbill/undotree'
         Plugin 'Shougo/neocomplete.vim'
         "Plugin 'shawncplus/phpcomplete.vim'
@@ -118,6 +129,9 @@
         Plugin 'xolox/vim-misc'
         Plugin 'xolox/vim-notes'
         Plugin 'vim-php/vim-php-refactoring'
+        Plugin 'fatih/vim-go'
+        Plugin 'godlygeek/tabular'
+        "Plugin 'wakatime/vim-wakatime'
     " }}}
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -169,6 +183,23 @@ function! InitializeDirectories()
     endfor
 endfunction
 call InitializeDirectories()
+" }}}
+
+" Close Hidden buffers {{{
+command! CloseHiddenBuffers call s:CloseHiddenBuffers()
+function! s:CloseHiddenBuffers()
+  let open_buffers = []
+
+  for i in range(tabpagenr('$'))
+    call extend(open_buffers, tabpagebuflist(i + 1))
+  endfor
+
+  for num in range(1, bufnr("$") + 1)
+    if buflisted(num) && index(open_buffers, num) == -1
+      exec "bdelete ".num
+    endif
+  endfor
+endfunction
 " }}}
 
 " Zoom / Restore window. {{{
