@@ -17,6 +17,7 @@
     set winminheight=0
     set hidden
     set rtp+=~/.fzf
+    set colorcolumn=120
     "Stolen from http://codeinthehole.com/writing/using-the-silver-searcher-with-vim/
     if executable("ag")
         set grepprg=ag\ --nogroup\ --nocolor\ --column
@@ -75,6 +76,7 @@
     noremap <F2> :NeoCompleteToggle<CR>
     nmap s <Plug>(easymotion-s)
     nmap S <Plug>(easymotion-bd-w)
+    nmap <Leader>t :Tabularize /=><CR>
 
     " Window Movements
     noremap <C-J> <C-W>j<C-W>_
@@ -131,6 +133,7 @@
         Plugin 'vim-php/vim-php-refactoring'
         Plugin 'fatih/vim-go'
         Plugin 'godlygeek/tabular'
+        Plugin 'stephpy/vim-php-cs-fixer'
         "Plugin 'wakatime/vim-wakatime'
     " }}}
     " All of your Plugins must be added before the following line
