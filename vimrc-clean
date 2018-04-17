@@ -45,13 +45,15 @@
     let g:php_refactor_command='~/bin/refactor.phar'
 
     " Golang variables
-    let g:go_bin_path=expand("~/bin/go/bin")
+    let g:go_bin_path=expand("~/go/bin")
     let g:go_highlight_functions = 1
     let g:go_highlight_methods = 1
     let g:go_highlight_fields = 1
     let g:go_highlight_types = 1
     let g:go_highlight_operators = 1
     let g:go_highlight_build_constraints = 1
+    let g:go_fmt_command = "goimports"
+    let g:go_def_mode='godef'
 
     " Disable PHP Mess detector
     let g:phpqa_messdetector_autorun=0
@@ -140,6 +142,7 @@
         Plugin 'stephpy/vim-php-cs-fixer'
         Plugin 'joonty/vim-phpqa'
         Plugin 'ludovicchabant/vim-gutentags'
+        Plugin 'terryma/vim-multiple-cursors'
     " }}}
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
