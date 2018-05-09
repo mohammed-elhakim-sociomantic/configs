@@ -143,6 +143,8 @@
         Plugin 'joonty/vim-phpqa'
         Plugin 'ludovicchabant/vim-gutentags'
         Plugin 'terryma/vim-multiple-cursors'
+        Plugin 'pangloss/vim-javascript'
+        Plugin 'mxw/vim-jsx'
     " }}}
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -254,6 +256,8 @@ if has("autocmd")
   " Insert use statements for vim-php-namespace
   autocmd FileType php inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
   autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+  autocmd FileType javascript setlocal sw=2 ts=2
 
   " Remove trailing Whitespaces for PHP files
   autocmd BufWritePre *.php :%s/\s\+$//e
