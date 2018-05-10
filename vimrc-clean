@@ -18,6 +18,8 @@
     set hidden
     set rtp+=~/.fzf
     set colorcolumn=120
+    set vb
+    set guifont=Menlo\ Regular:h15
     "Stolen from http://codeinthehole.com/writing/using-the-silver-searcher-with-vim/
     if executable("ag")
         set grepprg=ag\ --nogroup\ --nocolor\ --column
