@@ -56,6 +56,8 @@
     let g:go_highlight_build_constraints = 1
     let g:go_fmt_command = "goimports"
     let g:go_def_mode='godef'
+    let g:go_version_warning = 0
+
 
     " Disable PHP Mess detector
     let g:phpqa_messdetector_autorun=0
@@ -63,45 +65,23 @@
 
     " GutenTags
     let g:gutentags_ctags_tagfile=".guten-tags"
+
+    let g:org_todo_keywords = [['TODO', 'IN_PROGRESS', '|', 'BLOCKED', 'DONE'],
+      \   ['|', 'CANCELED']]
+    let g:org_todo_keyword_faces = [['IN_PROGRESS', '30'], ['BLOCKED',
+      \   [':foreground red', ':background black', ':weight bold',
+      \   ':slant italic', ':decoration underline']]]
+
 " }}}
 
-" Personal mapping by Hakim {{{
-    " Incsearch {{{
-        "map /  <Plug>(incsearch-forward)
-        "map ?  <Plug>(incsearch-backward)
-        "map g/ <Plug>(incsearch-stay)
-        "map n  <Plug>(incsearch-nohl-n)
-        "map N  <Plug>(incsearch-nohl-N)
-        "map *  <Plug>(incsearch-nohl-*)
-        "map #  <Plug>(incsearch-nohl-#)
-        "map g* <Plug>(incsearch-nohl-g*)
-        "map g# <Plug>(incsearch-nohl-g#)
-    " }}}
-
     nmap // :noh<CR>
-    "noremap <C-e> :NERDTreeToggle<CR>
-    "noremap <Leader>e :NERDTreeFind<CR>
     noremap <C-\> :CtrlPFunky<CR>
-    "noremap <Leader>u :UndotreeToggle<CR>
     noremap <F2> :NeoCompleteToggle<CR>
-    "nmap s <Plug>(easymotion-s)
-    "nmap S <Plug>(easymotion-bd-w)
-    "nmap <Leader>t :Tabularize /=><CR>
 
-    "map <leader>s <Plug>(sad-change-forward)
-    "map <leader>S <Plug>(sad-change-backward)
 
-    " Window Movements
-    "noremap <C-J> <C-W>j<C-W>_
-    "noremap <C-K> <C-W>k<C-W>_
-    "noremap <C-L> <C-W>l<C-W>_
-    "noremap <C-H> <C-W>h<C-W>_
-
-    " X will no longer write to register
-    "noremap x "_x
-
-    "Neocomplete supertab!
-    "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+    map <S-M-Left> <C-o>
+    map <S-M-Right> <C-i>
+    "
 " }}}
 
 " Vundle Stuff {{{
@@ -150,9 +130,15 @@
         Plugin 'terryma/vim-multiple-cursors'
         Plugin 'pangloss/vim-javascript'
         Plugin 'mxw/vim-jsx'
+
+        " Orgmode plugins
         Plugin 'jceb/vim-orgmode'
         Plugin 'tpope/vim-speeddating'
         Plugin 'mattn/calendar-vim'
+        Plugin 'vim-scripts/taglist.vim'
+        Plugin 'majutsushi/tagbar'
+        Plugin 'vim-scripts/utl.vim'
+
     " }}}
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
